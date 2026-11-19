@@ -27,3 +27,10 @@ services:
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     restart: unless-stopped
+
+      grafana:
+    image: grafana/grafana:latest
+    container_name: fusionpact-grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
