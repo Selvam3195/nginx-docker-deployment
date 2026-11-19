@@ -28,7 +28,7 @@ services:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     restart: unless-stopped
 
-      grafana:
+  grafana:
     image: grafana/grafana:latest
     container_name: fusionpact-grafana
     ports:
