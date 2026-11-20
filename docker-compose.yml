@@ -1,6 +1,3 @@
-
-version: "3.9"
-
 services:
   frontend:
     image: cherry3104/fusionpact-frontend:latest
