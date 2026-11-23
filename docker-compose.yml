@@ -1,3 +1,4 @@
+
 services:
   frontend:
     image: cherry3104/fusionpact-frontend:latest
@@ -11,6 +12,8 @@ services:
     container_name: fusionpact-backend
     ports:
       - "8000:8000"
+    volumes:
+      - fusionpact_backend_data:/app/app/data
     restart: unless-stopped
 
   prometheus:
@@ -35,3 +38,7 @@ services:
     ports:
       - "9100:9100"
     restart: unless-stopped
+
+volumes:
+  fusionpact_backend_data:
+    name: fusionpact_backend_data
