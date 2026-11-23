@@ -6,7 +6,7 @@ services:
     ports:
       - "8080:80"
     restart: unless-stopped
-
+    
   backend:
     image: cherry3104/fusionpact-backend:latest
     container_name: fusionpact-backend
